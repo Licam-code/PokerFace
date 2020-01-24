@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using PokerFace.Core;
 
 namespace PokerFace.Console
 {
@@ -11,11 +12,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'J'),
-                new Card('H', '2'),
-                new Card('D', '5'),
-                new Card('D', '8')
+                new Card('A','S' ),
+                new Card('J','D' ),
+                new Card('2','H' ),
+                new Card('5', 'S'),
+                new Card('T', 'S')
             };
 
             return this;
@@ -25,11 +26,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'A'),
-                new Card('D', '2'),
-                new Card('D', '5'),
-                new Card('D', '8')
+                new Card('A', 'S'),
+                new Card('A', 'D'),
+                new Card('5','D'),
+                new Card('8','D'),
+                new Card('T','D')
             };
 
             return this;
@@ -39,11 +40,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'A'),
-                new Card('D', '2'),
-                new Card('S', '2'),
-                new Card('D', '8')
+                new Card('A', 'S'),
+                new Card('A', 'D'),
+                new Card('8','S'),
+                new Card('8','D'),
+                new Card('T','D')
             };
 
             return this;
@@ -53,11 +54,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'A'),
-                new Card('C', 'A'),
-                new Card('S', '2'),
-                new Card('D', '8')
+                new Card('A', 'S'),
+                new Card('A', 'D'),
+                new Card('A','H'),
+                new Card('8','D'),
+                new Card('T','D')
             };
 
             return this;
@@ -67,11 +68,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'A'),
-                new Card('C', 'A'),
-                new Card('H', 'A'),
-                new Card('D', '8')
+                new Card('A', 'S'),
+                new Card('A', 'D'),
+                new Card('A','H'),
+                new Card('A','C'),
+                new Card('T','D')
             };
 
             return this;
@@ -81,11 +82,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', 'A'),
-                new Card('C', 'A'),
-                new Card('H', '8'),
-                new Card('D', '8')
+                new Card('A', 'S'),
+                new Card('A', 'D'),
+                new Card('A','H'),
+                new Card('8','D'),
+                new Card('8','S')
             };
 
             return this;
@@ -95,11 +96,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'A'),
-                new Card('D', '2'),
-                new Card('C', '3'),
-                new Card('H', '4'),
-                new Card('D', '5')
+                new Card('A', 'S'),
+                new Card('2', 'D'),
+                new Card('3','H'),
+                new Card('4','D'),
+                new Card('5','D')
             };
 
             return this;
@@ -109,11 +110,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', '3'),
-                new Card('D', '4'),
-                new Card('C', '5'),
-                new Card('H', '6'),
-                new Card('D', '7')
+                new Card('2', 'D'),
+                new Card('3','H'),
+                new Card('4','D'),
+                new Card('5','D'),
+                new Card('6', 'S'),
             };
 
             return this;
@@ -123,11 +124,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', '3'),
-                new Card('S', '4'),
-                new Card('S', 'K'),
-                new Card('S', '6'),
-                new Card('S', 'T')
+                new Card('2', 'D'),
+                new Card('3','D'),
+                new Card('4','D'),
+                new Card('8','D'),
+                new Card('T', 'D'),
             };
 
             return this;
@@ -137,11 +138,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', '3'),
-                new Card('S', '4'),
-                new Card('S', '5'),
-                new Card('S', '6'),
-                new Card('S', '7')
+                new Card('2', 'D'),
+                new Card('3','D'),
+                new Card('4','D'),
+                new Card('5','D'),
+                new Card('6', 'D')
             };
 
             return this;
@@ -151,11 +152,11 @@ namespace PokerFace.Console
         {
             _cards = new List<Card>()
             {
-                new Card('S', 'T'),
-                new Card('S', 'J'),
-                new Card('S', 'Q'),
-                new Card('S', 'K'),
-                new Card('S', 'A')
+                new Card('T', 'D'),
+                new Card('J','D'),
+                new Card('Q','D'),
+                new Card('K','D'),
+                new Card('A', 'D')
             };
 
             return this;

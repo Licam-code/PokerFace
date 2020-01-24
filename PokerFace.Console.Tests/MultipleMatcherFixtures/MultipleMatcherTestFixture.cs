@@ -1,76 +1,78 @@
 using NUnit.Framework;
+using PokerFace.Console;
+using PokerFace.Core.Matchers.MultipleMatcher;
 
-namespace PokerFace.Console.Tests.MultipleMatcherFixtures
+namespace PokerFace.Core.Tests.MultipleMatcherFixtures
 {
     public class MultipleMatcherTestFixture
     {
         [Test]
         public void GivenAMultiple_WhenValueIsTwo_ThenPairIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithPair()
                 .Build();
 
-            var multipleMatcher = new MultipleMatcher.MultipleMatcher();
-            multipleMatcher.Evaluate(_hand);
+            var multipleMatcher = new MultipleMatcher();
+            multipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.TwoKind));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.TwoKind));
 
         }
 
         [Test]
         public void GivenAMultiple_WhenValueIsThree_Then3OfAKindIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .With3OfAKind()
                 .Build();
 
-            var multipleMatcher = new MultipleMatcher.MultipleMatcher();
-            multipleMatcher.Evaluate(_hand);
+            var multipleMatcher = new MultipleMatcher();
+            multipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.ThreeKind));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.ThreeKind));
 
         }
 
         [Test]
         public void GivenAMultiple_WhenValueIsFour_Then4OfAKindIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .With4OfAKind()
                 .Build();
 
-            var multipleMatcher = new MultipleMatcher.MultipleMatcher();
-            multipleMatcher.Evaluate(_hand);
+            var multipleMatcher = new MultipleMatcher();
+            multipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.FourKind));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.FourKind));
 
         }
 
         [Test]
         public void GivenAMultiple_WhenValueIsTwoTwo_Then2PairIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .With2Pair()
                 .Build();
 
-            var multipleMatcher = new MultipleMatcher.MultipleMatcher();
-            multipleMatcher.Evaluate(_hand);
+            var multipleMatcher = new MultipleMatcher();
+            multipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.TwoPair));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.TwoPair));
 
         }
 
         [Test]
         public void GivenAMultiple_WhenValueIsTHreTwo_ThenFullHouseIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithFullHouse()
                 .Build();
 
-            var multipleMatcher = new MultipleMatcher.MultipleMatcher();
-            multipleMatcher.Evaluate(_hand);
+            var multipleMatcher = new MultipleMatcher();
+            multipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.FullHouse));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.FullHouse));
 
         }
 

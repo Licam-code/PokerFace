@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using NUnit.Framework;
-using PokerFace.Console.PatternMatcher;
+using PokerFace.Console;
+using PokerFace.Core.Matchers.PatternMatcher;
 
-namespace PokerFace.Console.Tests.PatternMatcherFixtures
+namespace PokerFace.Core.Tests.PatternMatcherFixtures
 {
     public class PatternMatcherTestFixture
     {
@@ -10,53 +10,53 @@ namespace PokerFace.Console.Tests.PatternMatcherFixtures
         [Test]
         public void GivenPatternMatch_WhenValueIsFlush_ThenAFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithFlush()
                 .Build();
             
-            var patternMatcher = new PatternMatcher.PatternMatcher();
-            patternMatcher.Evaluate(_hand);
+            var patternMatcher = new PatternMatcher();
+            patternMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.Flush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Flush));
         }
 
         [Test]
         public void GivenPatternMatch_WhenValueIsStraight_ThenAStraightIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithStraight()
                 .Build();
 
-            var patternMatcher = new PatternMatcher.PatternMatcher();
-            patternMatcher.Evaluate(_hand);
+            var patternMatcher = new PatternMatcher();
+            patternMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.Straight));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Straight));
         }
 
         [Test]
         public void GivenPatternMatch_WhenValueIsStraightFlush_ThenAStraightFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithStraightFlush()
                 .Build();
 
-            var patternMatcher = new PatternMatcher.PatternMatcher();
-            patternMatcher.Evaluate(_hand);
+            var patternMatcher = new PatternMatcher();
+            patternMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.StraightFlush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.StraightFlush));
         }
 
         [Test]
         public void GivenPatternMatch_WhenValueIsRoyalFlush_ThenARoyalFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithRoyalFlush()
                 .Build();
 
-            var patternMatcher = new PatternMatcher.PatternMatcher();
-            patternMatcher.Evaluate(_hand);
+            var patternMatcher = new PatternMatcher();
+            patternMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.RoyalFlush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.RoyalFlush));
         }
 
 

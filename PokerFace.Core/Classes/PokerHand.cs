@@ -35,7 +35,7 @@ namespace PokerFace.Core
             var sb = new StringBuilder();
             foreach (var card in Cards)
             {
-                sb.Append(card + " ");
+                sb.Append((char)((int)card.Rank) + "" + (char)((int)card.Suit) + " ");
             }
 
             sb.Append("... " + _rank.ToString());

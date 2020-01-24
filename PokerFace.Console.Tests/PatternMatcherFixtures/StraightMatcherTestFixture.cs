@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using NUnit.Framework;
-using PokerFace.Console.PatternMatcher;
+using PokerFace.Console;
+using PokerFace.Core.Matchers.PatternMatcher;
 
-namespace PokerFace.Console.Tests.PatternMatcherFixtures
+namespace PokerFace.Core.Tests.PatternMatcherFixtures
 {
     public class StraightMatcherTestFixture
     {
@@ -10,27 +10,27 @@ namespace PokerFace.Console.Tests.PatternMatcherFixtures
         [Test]
         public void GivenStraightMatch_WhenValueIsStraight_ThenAStraightIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithStraight()
                 .Build();
             
             var straightMatcher = new StraightMatcher();
-            straightMatcher.Evaluate(_hand);
+            straightMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.Straight));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Straight));
         }
 
         [Test]
         public void GivenStraightMatch_WhenValueIsAceLowStraight_ThenAStraightIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithStraight()
                 .Build();
 
             var straightMatcher = new StraightMatcher();
-            straightMatcher.Evaluate(_hand);
+            straightMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.Straight));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Straight));
         }
 
 

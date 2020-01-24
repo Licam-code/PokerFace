@@ -8,11 +8,10 @@ namespace PokerFace.Core
         public Suit Suit { get; }
         public Rank Rank { get; }
         
-        public Card(char suit, char rank)
+        public Card(char rank, char suit)
         {
-            
-            Suit = (Suit)Enum.ToObject(typeof(Suit), suit);
             Rank = (Rank)Enum.ToObject(typeof(Rank), rank);
+            Suit = (Suit)Enum.ToObject(typeof(Suit), suit);
         }
 
         public bool IsAce()
@@ -28,7 +27,7 @@ namespace PokerFace.Core
 
         public string Print()
         {
-            return ((char) Suit + "" + (char) Rank).ToString();
+            return ((char) Rank + "" + (char) Suit).ToString();
         }
 
 

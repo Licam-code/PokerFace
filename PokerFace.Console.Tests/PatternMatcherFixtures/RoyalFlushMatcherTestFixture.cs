@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using NUnit.Framework;
-using PokerFace.Console.PatternMatcher;
+using PokerFace.Console;
+using PokerFace.Core.Matchers.PatternMatcher;
 
-namespace PokerFace.Console.Tests.PatternMatcherFixtures
+namespace PokerFace.Core.Tests.PatternMatcherFixtures
 {
     public class RoyalFlushMatcherTestFixture
     {
@@ -10,27 +10,27 @@ namespace PokerFace.Console.Tests.PatternMatcherFixtures
         [Test]
         public void GivenRoyalFlushMatch_WhenValueIsRoyalFlush_ThenARoyalFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithRoyalFlush()
                 .Build();
             
             var royalFlushMatcher = new RoyalFlushMatcher();
-            royalFlushMatcher.Evaluate(_hand);
+            royalFlushMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.RoyalFlush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.RoyalFlush));
         }
 
         [Test]
         public void GivenRoyalFlushMatch_WhenValueIsStraightFlush_ThenAStraightFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithStraightFlush()
                 .Build();
 
             var royalFlushMatcher = new RoyalFlushMatcher();
-            royalFlushMatcher.Evaluate(_hand);
+            royalFlushMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.StraightFlush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.StraightFlush));
         }
 
 
