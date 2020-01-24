@@ -1,4 +1,5 @@
 ﻿using PokerFace.Core.Abstract;
+using PokerFace.Core.Classes;
 using PokerFace.Core.Matchers.MultipleMatcher;
 using PokerFace.Core.Matchers.PatternMatcher;
 

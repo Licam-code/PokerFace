@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using PokerFace.Core;
+using PokerFace.Core.Classes;
 
-namespace PokerFace.Console
+namespace PokerFace.Core.Tests.BuilderFixtures
 {
     public class PokerHandTestBuilder
     {

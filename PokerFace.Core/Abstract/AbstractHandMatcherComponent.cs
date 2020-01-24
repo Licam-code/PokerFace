@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using PokerFace.Core.Classes;
 
 namespace PokerFace.Core.Abstract
 {

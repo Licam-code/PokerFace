@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using PokerFace.Console;
+using PokerFace.Core.Classes;
+using PokerFace.Core.Enums;
 using PokerFace.Core.Matchers.MultipleMatcher;
+using PokerFace.Core.Tests.BuilderFixtures;
 
-namespace PokerFace.Core.Tests.MultipleMatcherFixtures
+namespace PokerFace.Core.Tests.MatcherFixtures.MultipleMatcherFixtures
 {
     public class OfAKindMatcherTestFixture
     {
@@ -19,7 +21,7 @@ namespace PokerFace.Core.Tests.MultipleMatcherFixtures
             var ofAKindMatcher = new OfAKindMatcher(testMultiple);
             ofAKindMatcher.Evaluate(hand);
 
-            Assert.That(hand.Rank, Is.EqualTo(HandRank.TwoKind));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Pair));
 
 
         }

@@ -1,8 +1,10 @@
 using NUnit.Framework;
-using PokerFace.Console;
+using PokerFace.Core.Classes;
+using PokerFace.Core.Enums;
 using PokerFace.Core.Matchers.PatternMatcher;
+using PokerFace.Core.Tests.BuilderFixtures;
 
-namespace PokerFace.Core.Tests.PatternMatcherFixtures
+namespace PokerFace.Core.Tests.MatcherFixtures.PatternMatcherFixtures
 {
     public class PatternMatcherTestFixture
     {

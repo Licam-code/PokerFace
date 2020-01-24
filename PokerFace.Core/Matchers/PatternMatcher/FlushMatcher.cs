@@ -1,5 +1,7 @@
 ﻿using System.Linq;
 using PokerFace.Core.Abstract;
+using PokerFace.Core.Classes;
+using PokerFace.Core.Enums;
 using PokerFace.Core.Interfaces;
 
 namespace PokerFace.Core.Matchers.PatternMatcher

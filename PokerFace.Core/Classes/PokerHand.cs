@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text;
+using PokerFace.Core.Enums;
 
-namespace PokerFace.Core
+namespace PokerFace.Core.Classes
 {
     public class PokerHand
     {

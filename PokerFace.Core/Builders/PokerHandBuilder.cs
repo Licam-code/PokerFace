@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using PokerFace.Core.Classes;
 
 namespace PokerFace.Core.Builders
 {
     public class PokerHandBuilder
     {
         private PokerHand _hand;
-        private List<Card> _cards = new List<Card>(5);
+        private List<Card> _cards;
 
         public PokerHandBuilder()
         {
@@ -45,7 +44,7 @@ namespace PokerFace.Core.Builders
         {
             if (_cards.Count != 5)
             {
-                throw new ArgumentOutOfRangeException("5 Cards are needed to make a poker hand");
+                throw new ArgumentException("Too many cards");
             }
             _hand = new PokerHand(_cards);
             return _hand;

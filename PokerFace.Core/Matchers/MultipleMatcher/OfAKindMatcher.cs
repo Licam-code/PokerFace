@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using PokerFace.Core.Abstract;
+using PokerFace.Core.Classes;
+using PokerFace.Core.Enums;
 
 namespace PokerFace.Core.Matchers.MultipleMatcher
 {
@@ -18,7 +20,7 @@ namespace PokerFace.Core.Matchers.MultipleMatcher
             switch (_rankOfAKind.Value)
             {
                 case 2:
-                    hand.Rank = HandRank.TwoKind;
+                    hand.Rank = HandRank.Pair;
                     break;
                 case 3:
                     hand.Rank = HandRank.ThreeKind;

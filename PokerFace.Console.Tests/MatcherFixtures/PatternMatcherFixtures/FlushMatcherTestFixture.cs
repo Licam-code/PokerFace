@@ -1,8 +1,10 @@
 using NUnit.Framework;
-using PokerFace.Console;
+using PokerFace.Core.Classes;
+using PokerFace.Core.Enums;
 using PokerFace.Core.Matchers.PatternMatcher;
+using PokerFace.Core.Tests.BuilderFixtures;
 
-namespace PokerFace.Core.Tests.PatternMatcherFixtures
+namespace PokerFace.Core.Tests.MatcherFixtures.PatternMatcherFixtures
 {
     public class FlushMatcherTestFixture
     {
@@ -10,14 +12,14 @@ namespace PokerFace.Core.Tests.PatternMatcherFixtures
         [Test]
         public void GivenFlushMatch_WhenValueIsFlush_ThenAFlushIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .WithFlush()
                 .Build();
             
             var flushMatcher = new FlushMatcher();
-            flushMatcher.Evaluate(_hand);
+            flushMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.Flush));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.Flush));
         }
 
 

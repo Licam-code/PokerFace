@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using PokerFace.Core.Abstract;
+using PokerFace.Core.Classes;
 
 namespace PokerFace.Core.Matchers.MultipleMatcher
 {

@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using PokerFace.Console;
+using PokerFace.Core.Enums;
 using PokerFace.Core.Matchers.MultipleMatcher;
+using PokerFace.Core.Tests.BuilderFixtures;
 
-namespace PokerFace.Core.Tests.MultipleMatcherFixtures
+namespace PokerFace.Core.Tests.MatcherFixtures.MultipleMatcherFixtures
 {
     public class DoubleMultipleMatcherTestFixture
     {
@@ -11,15 +12,15 @@ namespace PokerFace.Core.Tests.MultipleMatcherFixtures
         [Test]
         public void GivenADoubleMultiple_WhenValueIsTwoTwo_Then2PairIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .With2Pair()
                 .Build();
 
             var testMultiple = new Dictionary<Rank,int>(){ {Rank.Ace, 2}, {Rank.Eight, 2} };
-            var doubleMultiplMatcher = new DoubleMultipleMatcher(testMultiple);
-            doubleMultiplMatcher.Evaluate(_hand);
+            var doubleMultipleMatcher = new DoubleMultipleMatcher(testMultiple);
+            doubleMultipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.TwoPair));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.TwoPair));
 
 
         }
@@ -27,15 +28,15 @@ namespace PokerFace.Core.Tests.MultipleMatcherFixtures
         [Test]
         public void GivenADoubleMultiple_WhenValueIsThreeTwo_ThenHouseIsReturned()
         {
-            var _hand = new PokerHandTestBuilder()
+            var hand = new PokerHandTestBuilder()
                 .With3OfAKind()
                 .Build();
 
             var testMultiple = new Dictionary<Rank, int>() { { Rank.Ace, 3 }, { Rank.Eight, 2 } };
-            var doubleMultiplMatcher = new DoubleMultipleMatcher(testMultiple);
-            doubleMultiplMatcher.Evaluate(_hand);
+            var doubleMultipleMatcher = new DoubleMultipleMatcher(testMultiple);
+            doubleMultipleMatcher.Evaluate(hand);
 
-            Assert.That(_hand.Rank, Is.EqualTo(HandRank.FullHouse));
+            Assert.That(hand.Rank, Is.EqualTo(HandRank.FullHouse));
 
 
         }
